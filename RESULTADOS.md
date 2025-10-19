@@ -2,45 +2,40 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 2 queries
+✅ 4 correctas de 6 queries
 
-## ❌ Query 1: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,13 +1,25 @@
- apellido1 | apellido2 | nombre
- Domínguez | Guerrero | Antonio
-+Fahey | Considine | Antonio
- Gea | Ruiz | Sonia
- Gutiérrez | López | Juan
-+Hamill | Kozey | Manolo
- Heller | Pagac | Pedro
- Herman | Pacocha | Daniel
- Hernández | Martínez | Irene
- Herzog | Tremblay | Ramón
-+Kohler | Schoen | Alejandro
- Koss | Bayer | José
- Lakin | Yundt | Inma
-+Lemke | Rutherford | Cristina
-+Monahan | Murray | Micaela
-+Ramirez | Gea | Zoe
-+Ruecker | Upton | Guillermo
- Saez | Vega | Juan
- Sánchez | Pérez | Salvador
-+Schmidt | Fisher | David
-+Schowalter | Muller | Francesca
-+Spencer | Lakin | Esther
-+Stiedemann | Morissette | Alfredo
-+Streich | Hirthe | Carmen
- Strosin | Turcotte | Ismael
-```
+## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ❌ Query 2: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE telefono IS NULL' at line 5
+
+
+## ✅ Query 3: Correcto
+
+⏱ Tiempo: 0.33 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
+
+## ✅ Query 4: Correcto
+
+⏱ Tiempo: 0.33 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
+
+## ✅ Query 5: Correcto
+
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: id_grado
+
+---
+
+## ❌ Query 6: Error
 - **Descripción**: 'NoneType' object is not iterable
 
