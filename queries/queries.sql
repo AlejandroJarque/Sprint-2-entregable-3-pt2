@@ -134,10 +134,12 @@ WHERE pr.id_profesor IS NULL;
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
 SELECT departamento.nombre
-FROM departamento 
-LEFT JOIN asignatura 
-	ON asignatura.id = departamento.id
-WHERE asignatura.id IS NULL;
+FROM departamento
+	LEFT JOIN profesor 
+		ON departamento.id = profesor.id_departamento
+	LEFT JOIN asignatura 
+		ON profesor.id_profesor = asignatura.id_profesor
+WHERE asignatura.id IS NULL
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 SELECT COUNT(*) AS total
