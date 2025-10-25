@@ -61,15 +61,15 @@ WHERE nif = '26902806M';
 
 -- 8. Retorna un llistat amb el nom de tots els departaments que tenen professors/es que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015). (nombre)
 SELECT DISTINCT 
-    departamento.nombre AS departamento
+departamento.nombre
 FROM departamento
-JOIN profesor 
-    ON departamento.id = profesor.id_departamento
-JOIN asignatura 
-    ON profesor.id_profesor = asignatura.id_profesor
-JOIN grado 
-    ON asignatura.id_grado = grado.id
-WHERE grado.nombre = 'Grau en Enginyeria Informàtica (Pla 2015)';
+JOIN profesor
+	ON departamento.id = profesor.id_departamento
+JOIN asignatura
+	ON profesor.id_profesor = asignatura.id_profesor
+JOIN grado
+	ON asignatura.id_grado = grado.id
+WHERE grado.nombre = 'Grado en Ingeniería Informática (Plan 2015)';
 
 -- 9. Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019. (nombre, apellido1, apellido2)
 SELECT DISTINCT 
