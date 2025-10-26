@@ -139,7 +139,6 @@ LEFT JOIN profesor
     ON profesor.id_departamento = departamento.id
 LEFT JOIN persona 
     ON persona.id = profesor.id_profesor AND persona.tipo = 'profesor'
-ORDER BY departamento.nombre ASC;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 SELECT COUNT(*) AS total
