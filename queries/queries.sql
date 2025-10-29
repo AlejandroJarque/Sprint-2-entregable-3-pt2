@@ -241,5 +241,5 @@ FROM persona
 LEFT JOIN asignatura
     ON persona.id = asignatura.id_profesor
 WHERE persona.tipo = 'profesor'
-  AND persona.departamento_id IS NOT NULL
+  AND persona.id_departamento IS NOT NULL
   AND asignatura.id IS NULL;
