@@ -239,7 +239,7 @@ SELECT DISTINCT
     persona.nombre
 FROM persona
 JOIN profesor
-    ON persona.id = profesor.id_persona
+    ON persona.id = profesor.id_profesor
 LEFT JOIN asignatura
     ON persona.id = asignatura.id_profesor
 WHERE persona.tipo = 'profesor'
