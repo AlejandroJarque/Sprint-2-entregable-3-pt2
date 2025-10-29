@@ -184,7 +184,7 @@ ORDER BY total DESC;
 
 -- 21. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun, dels graus que tinguin més de 40 assignatures associades. (grau, total)
 SELECT 
-	grado.nombre AS grado,
+	grado.nombre AS grau,
     COUNT(asignatura.id) AS total
 FROM grado
 JOIN asignatura
