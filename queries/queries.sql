@@ -227,7 +227,8 @@ ORDER BY total DESC;
 
 -- 25. Retorna totes les dades de l'alumne/a més jove. (*)
 SELECT *
-FROM alumno
+FROM persona
+WHERE person.tipo = 'alumno'
 ORDER BY fecha_nacimiento DESC
 LIMIT 1;
 
