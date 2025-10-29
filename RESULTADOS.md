@@ -6,7 +6,7 @@
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.42 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -27,14 +27,14 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -42,28 +42,28 @@
 ## ✅ Query 6: Correcto
 
 ⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.52 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
+⏱ Tiempo: 0.56 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura,id_curso_escolar, PRIMARY, PRIMARY,nif
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento, id_profesor,id_grado
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 9: Correcto
 
 ⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
@@ -76,28 +76,28 @@
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.33 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -111,7 +111,7 @@
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -125,14 +125,14 @@
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
 
 ---
@@ -146,22 +146,22 @@
 
 ## ✅ Query 21: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
 ## ✅ Query 22: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_grado
 
 ---
 
 ## ✅ Query 23: Correcto
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_curso_escolar
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: id_curso_escolar, PRIMARY
 
 ---
 
@@ -187,14 +187,14 @@
  20.00 | Francesca | Schowalter | Muller | 0.00
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
 
 ## ✅ Query 25: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -202,28 +202,6 @@
 
 ---
 
-## ❌ Query 26: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,11 +1,11 @@
- apellido1 | apellido2 | nombre
- Schmidt | Fisher | David
--Kohler | Schoen | Alejandro
- Lemke | Rutherford | Cristina
--Fahey | Considine | Antonio
- Spencer | Lakin | Esther
- Streich | Hirthe | Carmen
-+Stiedemann | Morissette | Alfredo
-+Kohler | Schoen | Alejandro
-+Fahey | Considine | Antonio
- Ruecker | Upton | Guillermo
- Monahan | Murray | Micaela
--Stiedemann | Morissette | Alfredo
- Schowalter | Muller | Francesca
-```
+## ❌ Query 26: Error
+- **Descripción**: 1054 (42S22): Unknown column 'profesor.id_persona' in 'on clause'
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: id_profesor
-
----
