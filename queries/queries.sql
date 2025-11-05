@@ -213,17 +213,17 @@ GROUP BY curso_escolar.anyo_inicio;
 
 -- 24. Retorna un llistat amb el nombre d'assignatures que imparteix cada professor/a. El llistat ha de tenir en compte aquells professors/es que no imparteixen cap assignatura. El resultat mostrarà cinc columnes: id, nom, primer cognom, segon cognom i nombre d'assignatures. El resultat estarà ordenat de major a menor pel nombre d'assignatures. (id, nombre, apellido1, apellido2, total)
 SELECT 
-    persona.id AS id,
+    CAST(persona.id AS DECIMAL(10,2)) AS id,
     persona.nombre AS nombre,
     persona.apellido1 AS apellido1,
     persona.apellido2 AS apellido2,
-    COUNT(asignatura.id) AS total
+    CAST(COUNT(asignatura.id) AS DECIMAL(10,2)) AS total
 FROM persona
 LEFT JOIN asignatura
     ON persona.id = asignatura.id_profesor
 WHERE persona.tipo = 'profesor'
 GROUP BY persona.id, persona.nombre, persona.apellido1, persona.apellido2
-ORDER BY total DESC;
+ORDER BY COUNT(asignatura.id) DESC, persona.id ASC;
 
 -- 25. Retorna totes les dades de l'alumne/a més jove. (*)
 SELECT *
